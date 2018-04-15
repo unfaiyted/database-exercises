@@ -5,17 +5,17 @@ SELECT count(*) FROM employees WHERE
 AND gender = 'M';
 
 
+SELECT count(*) FROM employees WHERE
+  last_name like 'E%' and last_name like '%E';
 
 SELECT count(*) FROM employees WHERE
-  last_name like 'E%' or last_name like '%E';
-
-SELECT count(*) FROM employees WHERE
-  hire_date between '1990-01-01' and '1999-12-31';
-
-
-SELECT count(*) FROM employees WHERE
+  hire_date between '1990-01-01' and '1999-12-31' and
   month(birth_date) = 12 && day(birth_date) = 25;
 
+#
+# SELECT count(*) FROM employees WHERE
+#   month(birth_date) = 12 && day(birth_date) = 25;
+
 
 SELECT count(*) FROM employees WHERE
-  last_name like '%q%';
+  last_name like '%q%' AND last_name not like '%qu%'
