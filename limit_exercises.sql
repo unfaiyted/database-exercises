@@ -12,4 +12,4 @@ SELECT * FROM employees WHERE
   hire_date between '1990-01-01' and '1999-12-31' and
   month(birth_date) = 12 && day(birth_date) = 25
 ORDER BY birth_date ASC, hire_date DESC
-LIMIT 5;
+LIMIT 5 OFFSET 45;
