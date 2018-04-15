@@ -1,11 +1,13 @@
 use employees;
 
 SELECT count(*) FROM employees WHERE
-  first_name IN ('Irena','Vidya','Maya');
+  first_name IN ('Irena','Vidya','Maya')
+AND gender = 'M';
+
 
 
 SELECT count(*) FROM employees WHERE
-  last_name like 'E%';
+  last_name like 'E%' or last_name like '%E';
 
 SELECT count(*) FROM employees WHERE
   hire_date between '1990-01-01' and '1999-12-31';
